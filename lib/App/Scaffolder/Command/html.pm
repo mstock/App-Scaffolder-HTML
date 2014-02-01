@@ -15,7 +15,7 @@ use Path::Class::Dir;
 	$ scaffolder html --template html5 --name index --title "My Document"
 
 	# Create a simple XHTML file:
-	$ scaffolder html --template xhtml --name index --title "My Document"
+	$ scaffolder html --template xhtml10strict --name index --title "My Document"
 
 =head1 DESCRIPTION
 
@@ -30,7 +30,7 @@ C<html5>: Create a HTML5 document.
 
 =item *
 
-C<xhtml>: Create a XHTML document.
+C<xhtml10strict>: Create a XHTML 1.0 strict document.
 
 =back
 
