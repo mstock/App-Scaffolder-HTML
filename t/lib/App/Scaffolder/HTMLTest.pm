@@ -6,7 +6,6 @@ use warnings;
 
 use Carp;
 use Test::More;
-use Test::Exception;
 
 sub use_test : Test(1) {
 	my ($self) = @_;

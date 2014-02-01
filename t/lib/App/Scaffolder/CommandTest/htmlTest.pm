@@ -6,7 +6,6 @@ use warnings;
 
 use Carp;
 use Test::More;
-use Test::Exception;
 use App::Cmd::Tester;
 use Path::Class::Dir;
 use Test::File;
