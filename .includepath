@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includepath>
+	<includepathentry path="${resource_loc:/App-Scaffolder/lib}" />
+	<includepathentry path="${resource_loc:/App-Scaffolder-HTML/lib}" />
+	<includepathentry path="${resource_loc:/App-Scaffolder-HTML/t/lib}" />
+</includepath>
