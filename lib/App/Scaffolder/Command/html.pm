@@ -90,5 +90,16 @@ sub validate_args {
 	return;
 }
 
+=head1 SEE ALSO
+
+=over
+
+=item *
+
+L<App::Scaffolder::Command|App::Scaffolder::Command> - command base class
+
+=back
+
+=cut
 
 1;
