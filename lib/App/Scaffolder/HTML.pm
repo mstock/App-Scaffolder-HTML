@@ -19,6 +19,10 @@ for the actual command.
 
 L<App::Scaffolder|App::Scaffolder>
 
+=item *
+
+L<App::Scaffolder::Command::html|App::Scaffolder::Command::html>
+
 =back
 
 =cut
