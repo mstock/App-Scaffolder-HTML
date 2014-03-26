@@ -16,7 +16,7 @@ use Directory::Scratch;
 use App::Scaffolder;
 use App::Scaffolder::Command::html;
 
-sub app_test : Test(4) {
+sub app_test : Test(9) {
 	my ($self) = @_;
 
 	my $scratch = Directory::Scratch->new();
@@ -26,6 +26,7 @@ sub app_test : Test(4) {
 	is($result->error, undef, 'threw no exceptions');
 	my $file = $scratch->base()->file('index.html');
 	file_exists_ok($file);
+	like(scalar $file->slurp(), qr{<title>index</title>}, 'title added');
 
 	$scratch = Directory::Scratch->new();
 	$result = test_app('App::Scaffolder' => [
@@ -34,6 +35,16 @@ sub app_test : Test(4) {
 	is($result->error, undef, 'threw no exceptions');
 	$file = $scratch->base()->file('index.xhtml');
 	file_exists_ok($file);
+	like(scalar $file->slurp(), qr{<title>index</title>}, 'title added');
+
+	$scratch = Directory::Scratch->new();
+	$result = test_app('App::Scaffolder' => [
+		qw(html --name output --title Title --template xhtml10strict --target), $scratch->base()
+	]);
+	is($result->error, undef, 'threw no exceptions');
+	$file = $scratch->base()->file('output.xhtml');
+	file_exists_ok($file);
+	like(scalar $file->slurp(), qr{<title>Title</title>}, 'title added');
 }
 
 
